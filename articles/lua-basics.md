@@ -150,10 +150,8 @@ print(x, y, z)	--> 12  55  123
 You can execute a statement if a particular condition is met.
 
 ```lua
-function kittenAlert (kittenCount)
-	if kittenCount > 0 then 
-    	print('You have kitten(s)')
-    end
+if kittenCount > 0 then 
+    print('You have kitten(s)')
 end
 ```
 
@@ -161,14 +159,12 @@ end
 You may also branch the execution into many paths.
 
 ```lua
-function kittenAlert (kittenCount)
-	if kittenCount == 0 then 
-	    print('You have no kittens') 
-	elseif kittenCount == 1 then 
-	    print('You have a kitten') 
-	else
-	    print('You have many kittens') 
-	end
+if kittenCount == 0 then 
+    print('You have no kittens') 
+elseif kittenCount == 1 then 
+    print('You have a kitten') 
+else
+    print('You have many kittens') 
 end
 ```
 
@@ -326,6 +322,13 @@ end
 
 local _, _, zPosition = getCoordinates()
 ```
+
+### Spell it correctly
+
+From [Lua.org](http://www.lua.org/about.html#name):
+
+> "Lua" (pronounced LOO-ah) means "Moon" in Portuguese. As such, it is neither an acronym nor an abbreviation, but a noun. More specifically, "Lua" is a name, the name of the Earth's moon and the name of the language. Like most names, it should be written in lower case with an initial capital, that is, "Lua". Please do not write it as "LUA", which is both ugly and confusing, because then it becomes an acronym with [different meanings](http://acronyms.thefreedictionary.com/lua) for different people. So, please, write "Lua" right! 
+
 
 ## What next?
 
