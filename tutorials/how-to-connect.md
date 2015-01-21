@@ -5,14 +5,14 @@
 ## You will need:
 
 - ESP8266 module.
-- USB to serial UART adapter, for instance an FT232RL board.
+- USB to serial UART adapter, for instance an [FT232RL board](/shop/ft232rl-usb-to-serial-uart-adapter).
 - USB to micro USB cable.
 - Female-to-female dupont wires or other connectors.
 
 
 ## Layout
 
-Connect pins on the adapter to those on the module in the following configuration, then 
+Connect the pins on the adapter to those on the module in the following configuration, then connect the adapter to your machine with the USB cable. 
 
 | USB to serial adapter | ESP-xx module |
 | --------------------- | ------------- |
