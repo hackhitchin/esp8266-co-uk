@@ -7,8 +7,8 @@ This is the `Hello world` example of the hardware world. We'll write a script th
 
 ## You will need:
 
-- An ESP8266 module [connected to your machine](/tutorials/how-to-connect-an-esp8266-module)
-- The esp8266-cli [installed and configured](/tutorials/how-to-push-code).
+- An ESP8266 module [connected to your machine](/tutorials/how-to-connect-to-an-esp8266-module)
+- The esp8266-cli [installed and configured](/tutorials/how-to-push-code-to-an-esp8266-module).
 - An LED
 
 
@@ -64,7 +64,7 @@ tmr.alarm(0, duration, 1, function ()
 end)
 ```
 
-Save this as [`init.lua`](https://raw.githubusercontent.com/hackhitchin/esp8266-co-uk/master/recipes/blink-demo/init.lua), [push it to the module](/tutorials/how-to-push-code) and reset. 
+Save this as `init.lua`, [push it to the module](/tutorials/how-to-push-code) and reset. 
 
 Et voila.
 
