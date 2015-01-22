@@ -64,7 +64,7 @@ tmr.alarm(0, duration, 1, function ()
 end)
 ```
 
-Save this as `init.lua`, [push it to the module](/tutorials/how-to-push-code) and reset. 
+Save this as `init.lua`, [push it to the module](/tutorials/how-to-push-code-to-an-esp8266-module) and reset. 
 
 Et voila.
 
