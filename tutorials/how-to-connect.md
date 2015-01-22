@@ -12,19 +12,20 @@
 
 ## Layout
 
-Connect the pins on the adapter to those on the module in the following configuration, then connect the adapter to your machine with the USB cable. 
+Connect the pins on the adapter to those on the module in the following configuration, then connect the adapter to your machine with the USB cable.
 
 | USB to serial adapter | ESP-xx module |
 | --------------------- | ------------- |
-| 3.3v                  | 3.3v, CH_PD   |
+| VCC(3.3v)             | VCC, CH_PD    |
 | GND                   | GND           |
 | Tx                    | Rx            |
 | Rx                    | Tx            |
 
+### Important: 
+Your adapter may have two VCC pins (3.3v and 5v) or a single VCC pin and a jumper to switch between the two voltages. **You should use the 3.3v option.** If you accidently connect your module at 5v, don't worry too much; you can [buy more modules in our shop](/shop).
 
 ### ESP-01
-![Connections for ESP-01 module](../images/esp-01-connections.png)
-
+![Connections for ESP-01 module](https://raw.githubusercontent.com/hackhitchin/esp8266-co-uk/master/images/esp-01-connections.png)
 
 ## Communicating
 
