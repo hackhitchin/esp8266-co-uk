@@ -38,9 +38,11 @@ Great stuff. Time to code.
 ## Code
 In this Lua script we'll first set up some variables with values that we want to use later. This way, if in future we want to change the pin, duration, etc. we only need to change one line.
 
-Then we'll initialise the pin with the correct mode and give it a value.
+Then we'll create a function that first toggles our `value` variable between low and high, then assigns the new value to the LED pin.
 
-Finally we'll create an interval at index zero. Each time the timer ticks we will toggle in the value of our `value` variable and then write its new value to the LED.
+We'll initialise the pin with the correct mode and give it a value.
+
+Finally we'll create an interval at index zero. Each time the timer ticks we'll call the toggle function.
 
 ```lua
 -- Config
@@ -48,12 +50,9 @@ local pin = 4			--> GPIO2
 local value = gpio.LOW
 local duration = 1000	--> 1 second
 
--- Initialise the pin
-gpio.mode(pin, gpio.OUTPUT)
-gpio.write(pin, value)
 
--- Create an interval
-tmr.alarm(0, duration, 1, function ()
+-- Function toggles LED state
+function toggleLED ()
 	if value == gpio.LOW then
 		value = gpio.HIGH
 	else
@@ -61,7 +60,16 @@ tmr.alarm(0, duration, 1, function ()
 	end
 
 	gpio.write(pin, value)
-end)
+end
+
+
+-- Initialise the pin
+gpio.mode(pin, gpio.OUTPUT)
+gpio.write(pin, value)
+
+
+-- Create an interval
+tmr.alarm(0, duration, 1, toggleLED)
 ```
 
 Save this as `init.lua`, [push it to the module](/tutorials/how-to-push-code-to-an-esp8266-module) and reset. 
