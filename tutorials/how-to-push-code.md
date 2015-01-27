@@ -124,6 +124,6 @@ Now you've got the hang of it, why not try out some of the other [recipes](/reci
 
 ## Notes on the file system
 
-One thing to note is that the file system on the Lua firmware is very basic. There are no directories and every file resides the root path.
+One thing to note is that the file system on the Lua firmware is very basic. There are no directories and every file resides in the root path.
 
 Also bear in mind that space is limited and trying to push a file that is bigger than the space available will simply crash the firmware and the module will reboot. Lua compression tools may be needed if your project is complex.
